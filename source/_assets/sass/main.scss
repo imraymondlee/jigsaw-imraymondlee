@@ -1,0 +1,518 @@
+// Colors
+$primaryColor: #007d99;
+$secondaryColor: #db3000;
+$headingColor: #181a1b;
+$bodyColor: #4a4a4a;
+$lightGrayColour: #737373;
+
+// Max content container width
+$max-content-width: 1000px;
+
+// Breakpoints
+// Citation: https://medium.com/codeartisan/breakpoints-and-media-queries-in-scss-46e8f551e2f2
+$bp-sm: 753px;
+$bp-md: 1024px;
+$bp-lg: 1440px;
+@mixin bp-sm {
+  @media (min-width: $bp-sm) {
+    @content;
+  }
+}
+@mixin bp-md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+@mixin bp-lg {
+  @media (min-width: $bp-lg) {
+    @content;
+  }
+}
+
+// Removes bullets from lists
+@mixin unbulleted-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: #f8f9fc;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.8;
+  color: $bodyColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: $headingColor;
+}
+
+h1, .u-h1 {
+  font-size: 3.052rem;
+  line-height: 1.05;
+}
+
+h2, .u-h2 {
+  font-size: 2.441rem;
+  line-height: 1.25;
+}
+
+h3, .u-h3 {
+  font-size: 1.953rem;
+  line-height: 1.25;
+}
+
+h4, .u-h4 {
+  font-size: 1.563rem;
+  line-height: 1.22222222;
+}
+
+h5, .u-h5 {
+  font-size: 1.25rem;
+  line-height: 1.22222222;
+}
+
+h6, .u-h6 {
+  font-size: 0.89rem;
+  line-height: 1.22222222;
+}
+
+header {
+  margin: 1.75rem 1rem;
+
+  @include bp-md {
+    max-width: $max-content-width;
+    margin: 1.75rem auto;
+  }
+}
+
+main {
+  margin: 1.75rem 1rem;
+
+  @include bp-md {
+    max-width: $max-content-width;
+    margin: auto;
+  }
+}
+
+a {
+  font-weight: 600;
+  color: $primaryColor;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+//Navigation menu
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__left {
+    flex-grow: 1;
+  }
+
+  &__logo {
+    width: 3.33rem;
+  }
+
+  // List container for nav items
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Individual nav items
+  &__item {
+    list-style: none;
+  }
+
+  // Links in the nav
+  &__link {
+    margin: 0.5rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $bodyColor;
+
+    @include bp-sm {
+      margin: 1rem;
+      font-size: 1.125rem;
+    }
+
+    &.is-selected,
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 3px solid $primaryColor;
+      text-decoration: none;
+    }
+
+  }
+}
+
+//Home page landing
+.landing {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto;
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 3.125rem;
+    color: $secondaryColor;
+  }
+
+  &__subtitle {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  &__img {
+    display: none;
+    width: 35%;
+
+    @include bp-sm {
+      display: block;
+    }
+  }
+}
+
+// Home page project cards
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  text-decoration: none;
+  font-weight: 400;
+  color: $bodyColor;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &__details {
+    flex-basis: 60%;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    order: 1;
+  }
+
+  // Wrapper for blob and img
+  &__graphics {
+    position: relative;
+    overflow: hidden;
+    flex-basis: 40%;
+    text-align: center;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__blob {
+    position: absolute;
+    top: -26rem;
+    right: -13rem;
+    width: 46rem;
+
+    @include bp-sm {
+      right: -9rem;
+    }
+  }
+
+  &__category {
+    font-size: 0.889rem;
+    font-weight: 600;
+    color: $lightGrayColour;
+  }
+
+  &__title {
+    margin-top: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $headingColor;
+  }
+
+  &__description {
+    margin-top: 0.125rem;
+  }
+
+  // View project text
+  &__view {
+    display: block;
+    text-align: right;
+    font-size: 0.889rem;
+    font-weight: 600;
+    color: $primaryColor;
+  }
+
+  &__arrow {
+    width: 1.25rem;
+    vertical-align: sub;
+    transform: translateX(-2px);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  // State when there is hover, focus, active on the card
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.20);
+    text-decoration: none;
+
+    .project-card__view {
+      text-decoration: underline;
+    }
+
+    .project-card__arrow {
+      transform: translateX(1px);
+    }
+  }
+}
+
+//Project card grid
+.card-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__column {
+    flex: 0 0 49%;
+    margin-bottom: 2rem;
+  }
+
+  @include bp-sm {
+    justify-content: space-between;
+  }
+}
+
+//Project page banner
+.project-banner {
+  &__title {
+    margin-top: 5rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 5rem;
+    font-size: 1.125rem
+  }
+}
+
+// Quick details on the project
+.description {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__first {
+    flex-basis: 65%;
+  }
+
+  &__second {
+    flex-basis: 25%;
+  }
+
+  &__label {
+    margin-top: 1.5rem;
+    margin-bottom: 0.25rem;
+    color: $secondaryColor;
+    font-weight: 600;
+  }
+
+  &__list {
+    @include unbulleted-list;
+
+    li {
+      margin-top: 0.25rem;
+    }
+
+    // Used for Technology
+    &--inline {
+      li {
+        display: inline;
+
+        &:after {
+          content: ', ';
+        }
+
+        &:last-child:after {
+          content: none;
+        }
+      }
+    }
+  }
+
+  @include bp-md {
+    flex-direction: row;
+  }
+
+}
+
+// Displays images in a row
+.project-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex-basis: 60%;
+
+    @include bp-sm {
+      flex-basis: 30%;
+    }
+  }
+}
+
+// Project image
+.project-img {
+  display: block;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+// Project image and caption
+.project-figure {
+  width: 90%;
+  margin: 3rem auto;
+
+  &__img {
+    display: block;
+    width: 100%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  &__caption {
+    margin-top: 1rem;
+    font-style: italic;
+    color: $lightGrayColour;
+  }
+}
+
+
+//About page
+.about {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem auto;
+
+  &__img {
+    width: 10rem;
+    height: 10rem;
+    box-shadow: 0 10px 20px rgba(95, 95, 95, 0.19);
+    border-radius: 50%;    
+  }
+
+  &__text {
+    flex-basis: 75%;
+
+    @include bp-sm {
+      padding-left: 1rem;
+    }
+  }
+
+  @include bp-sm {
+    flex-direction: row;
+  }
+}
+
+//Footer
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 3rem 1rem 1rem 1rem;
+  border-top: 2px solid #d4d4d4;
+  padding-top: 2rem;
+  text-align: center;
+
+  a {
+    color: $lightGrayColour;
+    fill: $lightGrayColour;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #b9b6b6;
+      fill: #b9b6b6;
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    margin-bottom: 0.10rem;
+    color: $secondaryColor;
+    font-size: 0.89rem;
+    font-weight: 600;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 1.25rem;
+
+    svg {
+      width: 1.25rem;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+
+  @include bp-sm {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  @include bp-md {
+    max-width: $max-content-width;
+    margin: 3rem auto 1rem auto;
+  }
+}
+
+// Page divider
+.divider {
+  width: 30%;
+  margin: 3.5rem auto;
+  border-bottom: 3px solid $primaryColor;
+}
+
+// Content just for screen readers
+.show-for-sr {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+// Utils
+.u-margin-top-none {
+  margin-top: 0;
+}
