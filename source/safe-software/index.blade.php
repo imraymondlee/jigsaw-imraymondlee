@@ -9,7 +9,7 @@
   @include('_components.project-description', [
     'image'=>[
       'url'=>'/assets/images/safe-software/homepage.png',
-      'alt'=>'Safe Software home page'
+      'alt'=>'Safe Software homepage'
     ],
     'context'=>'Co-op Project',
     'technologies'=>['WCAG', 'HTML', 'Sass', 'jQuery', 'Laravel'],
