@@ -9,10 +9,15 @@ $lightGrayColour: #737373;
 $max-content-width: 1000px;
 
 // Breakpoints
-// Citation: https://medium.com/codeartisan/breakpoints-and-media-queries-in-scss-46e8f551e2f2
-$bp-sm: 753px;
+$bp-xsm: 460px;
+$bp-sm: 852px;
 $bp-md: 1024px;
 $bp-lg: 1440px;
+@mixin bp-xsm {
+  @media (min-width: $bp-xsm) {
+    @content;
+  }
+}
 @mixin bp-sm {
   @media (min-width: $bp-sm) {
     @content;
@@ -212,6 +217,7 @@ a {
 
   &__details {
     flex-basis: 60%;
+    margin-top: 0.5rem;
     padding: 0 1.5rem 1.5rem 1.5rem;
     order: 1;
   }
@@ -227,8 +233,13 @@ a {
   &__img {
     position: relative;
     z-index: 1;
+    max-width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    @include bp-xsm {
+      max-width: none;
+    }
   }
 
   &__blob {
@@ -299,8 +310,12 @@ a {
   flex-wrap: wrap;
 
   &__column {
-    flex: 0 0 49%;
+    flex: 0 0 100%;
     margin-bottom: 2rem;
+
+    @include bp-xsm {
+      flex: 0 0 49%;
+    }
   }
 
   @include bp-sm {
@@ -339,6 +354,12 @@ a {
     margin-bottom: 0.25rem;
     color: $secondaryColor;
     font-weight: 600;
+
+    &--context {
+      @include bp-md {
+        margin-top: 0;
+      }
+    }
   }
 
   &__list {
@@ -510,9 +531,4 @@ a {
   overflow: hidden;
   position: absolute !important;
   width: 1px;
-}
-
-// Utils
-.u-margin-top-none {
-  margin-top: 0;
 }

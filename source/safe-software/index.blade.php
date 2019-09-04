@@ -1,4 +1,4 @@
-@extends('_layouts.master')
+@extends('_layouts.master', ['title'=>'Safe Software | Raymond Lee'])
 
 @section('content')
   @include('_components.project-banner', [

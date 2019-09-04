@@ -18,7 +18,7 @@
     <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="project-img">
   </div>
   <div class="description__second">
-    <div class="description__label u-margin-top-none">Context</div>
+    <div class="description__label description__label--context">Context</div>
     <ul class="description__list">
       <li>{{ $context }}</li>
     </ul>

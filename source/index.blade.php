@@ -1,4 +1,4 @@
-@extends('_layouts.master')
+@extends('_layouts.master', ['title'=>'Raymond Lee', 'underlineProjects'=>true])
 
 @section('content')
   <section class="landing">

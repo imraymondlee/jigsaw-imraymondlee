@@ -105,7 +105,7 @@ a:hover, a:focus, a:active {
   text-decoration: none;
   color: #4a4a4a;
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .nav__link {
     margin: 1rem;
     font-size: 1.125rem;
@@ -135,7 +135,7 @@ a:hover, a:focus, a:active {
   display: none;
   width: 35%;
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .landing__img {
     display: block;
   }
@@ -153,6 +153,7 @@ a:hover, a:focus, a:active {
 }
 .project-card__details {
   flex-basis: 60%;
+  margin-top: 0.5rem;
   padding: 0 1.5rem 1.5rem 1.5rem;
   order: 1;
 }
@@ -165,8 +166,14 @@ a:hover, a:focus, a:active {
 .project-card__img {
   position: relative;
   z-index: 1;
+  max-width: 100%;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+@media (min-width: 460px) {
+  .project-card__img {
+    max-width: none;
+  }
 }
 .project-card__blob {
   position: absolute;
@@ -174,7 +181,7 @@ a:hover, a:focus, a:active {
   right: -13rem;
   width: 46rem;
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .project-card__blob {
     right: -9rem;
   }
@@ -223,10 +230,15 @@ a:hover, a:focus, a:active {
   flex-wrap: wrap;
 }
 .card-row__column {
-  flex: 0 0 49%;
+  flex: 0 0 100%;
   margin-bottom: 2rem;
 }
-@media (min-width: 753px) {
+@media (min-width: 460px) {
+  .card-row__column {
+    flex: 0 0 49%;
+  }
+}
+@media (min-width: 852px) {
   .card-row {
     justify-content: space-between;
   }
@@ -256,6 +268,11 @@ a:hover, a:focus, a:active {
   margin-bottom: 0.25rem;
   color: #db3000;
   font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .description__label--context {
+    margin-top: 0;
+  }
 }
 .description__list {
   margin: 0;
@@ -289,7 +306,7 @@ a:hover, a:focus, a:active {
 .project-screenshots__item {
   flex-basis: 60%;
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .project-screenshots__item {
     flex-basis: 30%;
   }
@@ -332,12 +349,12 @@ a:hover, a:focus, a:active {
 .about__text {
   flex-basis: 75%;
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .about__text {
     padding-left: 1rem;
   }
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .about {
     flex-direction: row;
   }
@@ -380,7 +397,7 @@ a:hover, a:focus, a:active {
 .footer__link span {
   vertical-align: middle;
 }
-@media (min-width: 753px) {
+@media (min-width: 852px) {
   .footer {
     flex-direction: row;
     text-align: left;
@@ -405,8 +422,4 @@ a:hover, a:focus, a:active {
   overflow: hidden;
   position: absolute !important;
   width: 1px;
-}
-
-.u-margin-top-none {
-  margin-top: 0;
 }
