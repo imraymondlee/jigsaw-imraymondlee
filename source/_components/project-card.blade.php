@@ -1,3 +1,15 @@
+{{-- 
+  Project Card on the home page
+  [
+    'url'=>'/kasa-alarm/',
+    'category'=>'React App',
+    'title'=>'Kasa Alarm',
+    'description'=>'Wakeup light web app for Kasa Smart light bulbs',
+    'image'=>'/assets/images/kasa-alarm/thumbnail.png',
+    'fillColor'=>'#c3ebf1'
+  ]
+--}}
+
 <a href="{{ $url }}" class="project-card">
   <div class="project-card__details">
     <div class="project-card__category"><span class="show-for-sr">Project Category: </span>{{ $category }}</div>
