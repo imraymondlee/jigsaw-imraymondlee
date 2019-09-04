@@ -8,7 +8,9 @@
   </head>
   <body>
     @include('_partials.header')
-    @yield('content')
+    <main>
+      @yield('content')
+    </main>
     @include('_partials.footer')
   </body>
 </html>
