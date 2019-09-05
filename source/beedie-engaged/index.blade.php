@@ -22,13 +22,13 @@
     <h2>Overview</h2>
     <p>The Beedie School of Business wanted a single website as a replacement for multiple websites that people use to get their latest news and other content from the school. By having a single website to replace the multiple websites, traffic to content that might not be usually seen would be driven up as some people only go to a specific one but not another. This new website would contain news, videos, and research from the school. I created this website during my 8 month co-op term for the school, which I was responsible from design to development. Through the process, we did not have a finalized the name for the website. The site was named as 'Beedie Engaged' at the end of my co-op term, which it has now been named as 'Ideas@Beedie.'</p>
     <h2>Process</h2>
-    <h3 class="u-h5">Mockup & Wireframes</h3>
+    <h3 class="u-h4">Mockup & Wireframes</h3>
     <p>A mockup of the homepage provided a starting point as a guideline for all of the pages. This layout allows the website to feature different posts on the top of the homepage, provide information and quick links in the sidebar, as well as a list of the latest posts for each of the categories. All this is contained in the general layout of the school's website. Wireframes for the pages of the different types of categories and posts were then created. These layouts were aligned with the one of the homepage.</p>
     @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/beedie-engaged/wireframes.png', 'alt'=>'Mockup of the homepage and sketched wireframes of the news category, news posts, speakers category, and speakers video pages.'],
       'caption'=>'Mockup and wireframes of each page template.'
     ])
-    <h3 class="u-h5">Final Product</h3>
+    <h3 class="u-h4">Final Product</h3>
     <p>In the final website, the layout of the homepage was revised in order for it to show featured tags of posts along the top of page. In addition, the featured post was shrunken down to allow space for school ads. We decided on that the event category should not be as prominent and should be moved to the sidebar. An additional category for research articles was used to replace it.</p>
     @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/beedie-engaged/home.png', 'alt'=>'Homepage layout'],

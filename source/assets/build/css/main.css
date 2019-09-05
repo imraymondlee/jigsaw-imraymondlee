@@ -20,32 +20,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, .u-h1 {
-  font-size: 3.052rem;
+  font-size: 2.441rem;
   line-height: 1.05;
 }
 
 h2, .u-h2 {
-  font-size: 2.441rem;
-  line-height: 1.25;
-}
-
-h3, .u-h3 {
   font-size: 1.953rem;
   line-height: 1.25;
 }
 
-h4, .u-h4 {
+h3, .u-h3 {
   font-size: 1.563rem;
-  line-height: 1.22222222;
+  line-height: 1.25;
 }
 
-h5, .u-h5 {
+h4, .u-h4 {
   font-size: 1.25rem;
   line-height: 1.22222222;
 }
 
+h5, .u-h5 {
+  font-size: 1rem;
+  line-height: 1.22222222;
+}
+
 h6, .u-h6 {
-  font-size: 0.89rem;
+  font-size: 0.8rem;
   line-height: 1.22222222;
 }
 
@@ -123,7 +123,7 @@ a:hover, a:focus, a:active {
 }
 .landing__title {
   margin-bottom: 1rem;
-  font-size: 3.125rem;
+  font-size: 3.052rem;
   color: #db3000;
 }
 .landing__subtitle {
@@ -154,7 +154,7 @@ a:hover, a:focus, a:active {
 }
 .project-card__details {
   flex-basis: 60%;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   padding: 0 1.25rem 1.25rem 1.25rem;
   order: 1;
 }
@@ -169,7 +169,6 @@ a:hover, a:focus, a:active {
   z-index: 1;
   max-width: 100%;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 @media (min-width: 460px) {
   .project-card__img {
@@ -193,23 +192,22 @@ a:hover, a:focus, a:active {
   }
 }
 .project-card__category {
-  font-size: 0.889rem;
   font-weight: 600;
   color: #737373;
 }
 .project-card__title {
-  margin-top: 0.5rem;
-  font-size: 1.125rem;
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #181a1b;
 }
 .project-card__description {
-  margin-top: 0.125rem;
+  margin-top: 0;
 }
 .project-card__view {
   display: block;
   text-align: right;
-  font-size: 0.889rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #007d99;
 }
@@ -387,9 +385,8 @@ a:hover, a:focus, a:active {
   margin-bottom: 1.5rem;
 }
 .footer__label {
-  margin-bottom: 0.1rem;
   color: #db3000;
-  font-size: 0.89rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .footer__link {

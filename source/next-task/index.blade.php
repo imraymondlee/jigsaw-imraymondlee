@@ -22,9 +22,9 @@
     <h2>Overview</h2>
     <p>Next Task is a system used to help people schedule their tasks for their customers periodically. I developed this web application after seeing an opportunity for workers to improve their work management processes. This web application works for different type of tasks of different work fields such as tutoring, dog walking, and landscaping. In this system, customer information can be managed along with having the ability to see when there is an upcoming visit to a customer. After user research, prototypes, and user tests, the final product was built using PHP, MySQL, HTML, CSS, and JavaScript.</p>
     <h2>Process</h2>
-    <h3 class="u-h5">User Research</h3>
+    <h3 class="u-h4">User Research</h3>
     <p>The first stage involved conducting interviews with a tutor and a landscaper. These jobs fall in the target of who the application is designed for as they have many customers that whom they visit periodically. During the interviews, the tutor and landscaper through current methods that they use to manage their customers and tasks. It was found that for both of them, customer information is primarily stored as a contact on their phone. Scheduling for when they next visit a customer is in an agenda. After looking through their process, I discussed with them about ways on how it can be improved. The plan was to digitize their work scheduling process and find a way to easily assign the next time they visit a customer.</p>
-    <h3 class="u-h5">Prototype</h3>
+    <h3 class="u-h4">Prototype</h3>
     <p>I started with sketches of how the application would be laid out and what features it would have. The plan was to have two separate tables with one being filled with upcoming tasks and the other with customer information. The user is able to add tasks and customers in the system. Each time a task has been completed, it will be renewed for another visit based on a specified interval.</p>
     @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/next-task/sketches.png', 'alt'=>'Initial sketches of Next Task interface for the tasks, new task, customers, customer profile pages.'],
@@ -35,7 +35,7 @@
       'image'=>['url'=>'/assets/images/next-task/prototype.png', 'alt'=>'Prototype of Next Task interface.'],
       'caption'=>'Prototype of Next Task was built for user testing.'
     ])
-    <h3 class="u-h5">Final Product</h3>
+    <h3 class="u-h4">Final Product</h3>
     <p>The final web application was developed using Foundation framework along with PHP and MySQL in the backend. It is responsive with a layout that has a navigation menu on the side for larger screens and one with a bottom navigation menu for smaller screens. Links to add new tasks and customers were added to the menu in order for them to be easily accessible.</p>
     @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/next-task/responsive.png', 'alt'=>'Responsive layout of the web application.'],

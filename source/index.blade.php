@@ -3,7 +3,7 @@
 @section('content')
   <section class="landing">
     <div>
-      <h1 class="landing__title">Hi, I'm Raymond Lee.</h1>
+      <h1 class="landing__title">Hi, I'm Raymond Lee</h1>
       <p class="landing__subtitle">A web developer based in Vancouver, Canada.</p>
     </div>
     <img src="/assets/images/landing-img.svg" alt="" class="landing__img">
