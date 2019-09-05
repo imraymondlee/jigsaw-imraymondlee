@@ -154,7 +154,7 @@ a:hover, a:focus, a:active {
 .project-card__details {
   flex-basis: 60%;
   margin-top: 0.5rem;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.25rem 1.25rem 1.25rem;
   order: 1;
 }
 .project-card__graphics {
