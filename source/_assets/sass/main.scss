@@ -197,6 +197,7 @@ a {
   &__img {
     display: none;
     width: 35%;
+    height: 250px;
 
     @include bp-sm {
       display: block;
