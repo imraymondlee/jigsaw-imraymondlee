@@ -245,9 +245,13 @@ a {
 
   &__blob {
     position: absolute;
-    top: -26rem;
+    top: -15rem;
     right: -13rem;
     width: 46rem;
+
+    @include bp-xsm {
+      top: -26rem;
+    }
 
     @include bp-sm {
       right: -9rem;
