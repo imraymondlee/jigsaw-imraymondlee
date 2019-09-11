@@ -4,7 +4,7 @@
   <section class="landing">
     <div>
       <h1 class="landing__title">Hi, I'm Raymond Lee</h1>
-      <p class="landing__subtitle">A web developer based in Vancouver, Canada.</p>
+      <p class="landing__subtitle">A web developer with a focus on digital accessibility.</p>
     </div>
     <img src="/assets/images/landing-img.svg" alt="" class="landing__img">
   </section>
@@ -38,7 +38,7 @@
           'url'=>'/next-task/',
           'category'=>'Web App',
           'title'=>'Next Task',
-          'description'=>'Customer task scheduling system',
+          'description'=>'Customer task scheduling web app',
           'image'=>'/assets/images/next-task/thumbnail.png',
           'fillColor'=>'#f7e8c9'
         ])

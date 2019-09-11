@@ -2,7 +2,7 @@
   Image with caption
   [
     'image'=>['url'=>'/assets/images/kasa-alarm/postman.png', 'alt'=>'POST request on Postman to set alarm with JSON data'],
-    'caption'=>'Postman was used before having the frontend set up.'
+    'caption'=>'Postman was used before having the front-end set up.'
   ]
 
   isProjectScreenshotsItem used to put image in a column grid
