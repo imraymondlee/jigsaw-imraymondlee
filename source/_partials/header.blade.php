@@ -6,7 +6,7 @@
     <ul class="nav__list">
       <li class="nav__item"><a href="/#projects" class="nav__link {{ $underlineProjects ? 'is-selected' : '' }}">Projects</a></li>
       <li class="nav__item"><a href="/about/" class="nav__link {{ $underlineAbout ? 'is-selected' : '' }}">About</a></li>
-      <li class="nav__item"><a href="/LeeRaymondResume.pdf/" class="nav__link" target="_blank">Resume</a></li>
+      <li class="nav__item"><a href="/LeeRaymondResume.pdf" class="nav__link">Resume</a></li>
     </ul>
   </nav>
 </header>
