@@ -165,14 +165,16 @@ a {
       font-size: 1.125rem;
     }
 
-    &.is-selected,
     &:hover,
     &:focus,
     &:active {
-      border-bottom: 3px solid $primaryColor;
       text-decoration: none;
     }
 
+    &.is-selected,
+    &:hover {
+      border-bottom: 3px solid $primaryColor;
+    }
   }
 }
 
