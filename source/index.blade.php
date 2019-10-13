@@ -24,9 +24,9 @@
       <div class="card-row__column">
         @include('_components.project-card', [
           'url'=>'/kasa-alarm/',
-          'category'=>'React App',
+          'category'=>'Web App',
           'title'=>'Kasa Alarm',
-          'description'=>'Wakeup light web app for Kasa Smart light bulbs',
+          'description'=>'Wake-up light web app for Kasa Smart light bulbs',
           'image'=>'/assets/images/kasa-alarm/thumbnail.png',
           'fillColor'=>'#c3ebf1'
         ])

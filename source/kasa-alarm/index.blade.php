@@ -3,7 +3,7 @@
 @section('content')
   @include('_components.project-banner', [
     'title'=>'Kasa Alarm',
-    'subtitle'=>'Wakeup light web app for Kasa Smart light bulbs'
+    'subtitle'=>'Wake-up light web app for Kasa Smart light bulbs'
   ])
 
   @include('_components.project-description', [
@@ -20,7 +20,7 @@
   <hr class="divider">
   <section>
     <h2>Overview</h2>
-    <p>Kasa Alarm is a wakeup light web app designed for Kasa Smart's line of smart light bulbs. This personal project started when I wanted the ability for my smart light bulbs to gradually increase the brightness to wake me up for my alarm time, which Kasa Smart's mobile app did not offer. I built this with React and Node.js so it can be accessed with just a web browser.</p>
+    <p>Kasa Alarm is a wake-up light web app designed for Kasa Smart's line of smart light bulbs. This personal project started when I wanted the ability for my smart light bulbs to gradually increase the brightness to wake me up for my alarm time, which Kasa Smart's mobile app did not offer. I built this with React and Node.js so it can be accessed with just a web browser.</p>
     <h2>Process</h2>
     <h3 class="u-h4">Back-end</h3>
     <p>A back-end was needed to control the lights and keep track of the alarms. I used Node.js with Express on the back-end. Since Kasa Smart did not have an available API to control the lights, I was able to find a third-party library for the connection. I created API endpoints for setting an alarm, deleting an alarm, getting current alarms, and controlling the lights. Postman was used during this process to ensure everything was working correctly.</p>
@@ -60,6 +60,6 @@
       ])
     </div>
     <h2>Reflection</h2>
-    <p>In the end, I have a web app that allows my smart light bulbs to be used as a wakeup light. Due to the limitations of the library used to connect to the lights, the app can only be run in the same local network of the lights. I plan on expanding it to control other smart devices during the wake-up sequence. That way, a device such as a fan connected to a smart plug can also be turned on at a specific time. This was my first project where I worked with both Node.js and React.</p>
+    <p>In the end, I have a web app that allows my smart light bulbs to be used as a wake-up light. Due to the limitations of the library used to connect to the lights, the app can only be run in the same local network of the lights. I plan on expanding it to control other smart devices during the wake-up sequence. That way, a device such as a fan connected to a smart plug can also be turned on at a specific time. This project allowed me to learn more about creating API endpoints.</p>
   </section>
 @endsection
