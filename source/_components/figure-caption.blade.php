@@ -5,10 +5,10 @@
     'caption'=>'Postman was used before having the front-end set up.'
   ]
 
-  isProjectScreenshotsItem used to put image in a column grid
+  isProjectScreenshotsItem used to put image in a column grid. Don't set false to not have it, just leave it out.
 --}}
 
-<figure class="project-figure {{ $isProjectScreenshotsItem ? 'project-screenshots__item' : '' }}">
+<figure class="project-figure {{ isset($isProjectScreenshotsItem) ? 'project-screenshots__item' : '' }}">
   <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="project-figure__img">
   <figcaption class="project-figure__caption">{{ $caption }}</figcaption>
 </figure>
