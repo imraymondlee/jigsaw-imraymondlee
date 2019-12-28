@@ -28,12 +28,16 @@
     <h3 class="u-h4">Front-end</h3>
     <p>The front-end was built using React with custom-made styling. My goal for the interface was to be minimal and clutter-free, unlike many recipe websites. This would allow for quick navigation for users. Instead of building a user system to post recipes, I utilized Google Sign-in. This would allow for frustration-free signup, and allow the authentication process to be in the front-end.</p>
     @include('_components.figure-caption', [
+      'image'=>['url'=>'/assets/images/our-cookbook/homepage.png', 'alt'=>'Our Cookbook homepage'],
+      'caption'=>'Homepage displays all of the recipes.'
+    ])
+    @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/our-cookbook/recipe.png', 'alt'=>'Recipe page for Slow Cooker Beef Chili'],
       'caption'=>'The minimal interface of each recipe allows users to see essential information.'
     ])
     @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/our-cookbook/new-recipe.png', 'alt'=>'Page to add a new recipe'],
-      'caption'=>'New Recipe page.'
+      'caption'=>'Page to add a new recipe.'
     ])
     @include('_components.figure-caption', [
       'image'=>['url'=>'/assets/images/our-cookbook/mobile-homepage.png', 'alt'=>'Homepage in mobile view'],
