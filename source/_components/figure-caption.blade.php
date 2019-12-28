@@ -6,9 +6,10 @@
   ]
 
   isProjectScreenshotsItem used to put image in a column grid. Don't set false to not have it, just leave it out.
+  useOriginalImgWidth used to set image to use its original width. Don't set false to not have it, just leave it out.
 --}}
 
 <figure class="project-figure {{ isset($isProjectScreenshotsItem) ? 'project-screenshots__item' : '' }}">
-  <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="project-figure__img">
+  <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="project-figure__img {{ isset($useOriginalImgWidth) ? 'project-figure__img--original' : '' }}">
   <figcaption class="project-figure__caption">{{ $caption }}</figcaption>
 </figure>
