@@ -393,7 +393,11 @@ a {
   @include bp-md {
     flex-direction: row;
   }
+}
 
+.project-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 // Displays images in a row

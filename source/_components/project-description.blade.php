@@ -13,7 +13,7 @@
   ]
 --}}
 
-<section class="description">
+<div class="description">
   <div class="description__first">
     <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="project-img">
   </div>
@@ -35,4 +35,4 @@
       @endforeach
     </ul>
   </div>
-</section>
+</div>

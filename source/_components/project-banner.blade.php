@@ -6,7 +6,7 @@
   ]
 --}}
 
-<section class="project-banner">
+<div class="project-banner">
   <h1 class="project-banner__title">{{ $title }}</h1>
   <p class="project-banner__subtitle">{{ $subtitle }}</p>
-</section>
+</div>
