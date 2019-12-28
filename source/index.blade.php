@@ -13,6 +13,28 @@
     <div class="card-row">
       <div class="card-row__column">
         @include('_components.project-card', [
+          'url'=>'/jobdoor/',
+          'category'=>'Web App',
+          'title'=>'Jobdoor',
+          'description'=>'Intern and new grad job board',
+          'image'=>'/assets/images/jobdoor/thumbnail.png',
+          'fillColor'=>'#b5cbec'
+        ])
+      </div>
+      <div class="card-row__column">
+        @include('_components.project-card', [
+          'url'=>'/our-cookbook/',
+          'category'=>'Web App',
+          'title'=>'Our Cookbook',
+          'description'=>'Collaborative cookbook web app',
+          'image'=>'/assets/images/our-cookbook/thumbnail.png',
+          'fillColor'=>'#b5e6dc'
+        ])
+      </div>
+    </div>
+    <div class="card-row">
+      <div class="card-row__column">
+        @include('_components.project-card', [
           'url'=>'/safe-software/',
           'category'=>'Web Accessibility',
           'title'=>'Safe Software Web Accessibility',
